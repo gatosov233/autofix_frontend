@@ -6,6 +6,7 @@
   <title>Confirmación de Agenda - AutoFix</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/accesisibility.css">
   <style>
     body {
       background-color: #2c2c2c;
@@ -51,6 +52,11 @@
   </style>
 </head>
 <body>
+  <span id="normal" class="a11y-target" aria-hidden="true"></span>
+  <span id="texto-grande" class="a11y-target" aria-hidden="true"></span>
+  <span id="contraste" class="a11y-target" aria-hidden="true"></span>
+  <span id="contraste-texto" class="a11y-target" aria-hidden="true"></span>
+  <div class="page-shell">
   <iframe
     src="partials/navbar.html"
     title="Barra de navegación"
@@ -71,6 +77,19 @@
     title="Pie de página"
     style="width:100%;height:72px;border:0;display:block"
     loading="lazy"></iframe>
+  </div>
+  <details class="a11y-widget">
+    <summary>Accesibilidad</summary>
+    <div class="a11y-panel">
+      <p>Cambia el tamaño del texto, el contraste y el contraste del texto para una mejor experiencia.</p>
+      <div class="a11y-grid">
+        <a class="a11y-option" href="#texto-grande">Texto grande</a>
+        <a class="a11y-option" href="#contraste">Alto contraste</a>
+        <a class="a11y-option" href="#contraste-texto">Contraste + texto</a>
+        <a class="a11y-option" href="#normal">Restablecer</a>
+      </div>
+    </div>
+  </details>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
